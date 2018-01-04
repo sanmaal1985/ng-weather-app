@@ -1,0 +1,12 @@
+<mat-card class="search-card">
+    <mat-form-field class="search-card-field">
+        <input matInput placeholder="City name" [(ngModel)]="searchString">
+        <mat-icon matSuffix *ngIf="!searchString">search</mat-icon>
+        <button mat-button *ngIf="searchString" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearchString()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+    <mat-card-actions>
+        <button mat-button [disabled]="!searchString">Get forecast</button>
+    </mat-card-actions>
+</mat-card>

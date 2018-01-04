@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+app-main-container {
+    flex-grow: 1;
+    padding: 17px;
+}
