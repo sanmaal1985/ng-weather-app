@@ -7,6 +7,7 @@ import { ForecastComponent } from './Forecast/forecast.component';
 import { ForecastListComponent } from './ForecastList/forecast-list.component';
 import { MainContainerComponent } from './MainContainer/main-container.component';
 import { MaterialModule } from '../material/material.module';
+import { HeaderComponent } from './Header/header.component';
 
 @NgModule({
     imports: [
@@ -18,13 +19,15 @@ import { MaterialModule } from '../material/material.module';
         ForecastComponent,
         ForecastListComponent,
         SearchBarComponent,
-        MainContainerComponent
+        MainContainerComponent,
+        HeaderComponent,
     ],
     exports: [
         ForecastComponent,
         ForecastListComponent,
         SearchBarComponent,
         MainContainerComponent,
+        HeaderComponent,
         MaterialModule
     ]
 })
