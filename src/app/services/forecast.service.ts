@@ -60,7 +60,12 @@ export class ForecastService {
     private getForecastByCoord(coord: GeolocationObject) {
         this.getForecast(new HttpParams()
             .set('lat', coord.lat.toString())
-            .set('lon', coord.lon.toString()));
+            .set('lon', coord.lon.toString())
+        );
+    }
+
+    public getForecastByCityName(cityName: string) {
+        this.getForecast(new HttpParams().set('q', cityName));
     }
 
     private handleError(error: HttpErrorResponse) {

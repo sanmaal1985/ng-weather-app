@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForecastService } from '../../services/forecast.service';
 
 @Component({
     selector: 'app-search-bar',
@@ -8,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class SearchBarComponent implements OnInit {
     private searchString = '';
-    constructor() { }
+    constructor(private forecast: ForecastService) { }
 
     ngOnInit() { }
 
     private clearSearchString() {
         this.searchString = '';
+    }
+
+    private getForecast() {
+        this.forecast.getForecastByCityName(this.searchString);
     }
 }

@@ -7,6 +7,6 @@
         </button>
     </mat-form-field>
     <mat-card-actions>
-        <button mat-button [disabled]="!searchString">Get forecast</button>
+        <button mat-button [disabled]="!searchString" (click)="getForecast()">Get forecast</button>
     </mat-card-actions>
 </mat-card>
